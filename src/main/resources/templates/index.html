@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8">
+    <title>Loren Ipsum</title>
+</head>
+<body>
+
+<form acion="/">
+
+    <input type="number" name="howmany"   th:value="${howmany}">
+
+    <select name="modetype" id="modetype" style="text-transform:capitalize;">
+        <option value="words" th:selected="${modetype=='words'}">words</option>
+        <option value="sentences" th:selected="${modetype=='sentences'}">sentences</option>
+        <option value="paragraphs" th:selected="${modetype=='paragraphs'}">paragraphs</option>
+
+    </select>
+    <input type="submit" value="Generate" class="btn-login">
+</form>
+
+<h3 th:utext="${result}"></h3>
+
+</body>
+</html>
